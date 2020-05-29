@@ -41,6 +41,8 @@ do_install_append() {
     rm -rf ${D}/usr/src/usr/
 }
 
+IMAGE_INSTALL += " kernel-modules"
+
 BOOT_PARTITION = "/dev/mmcblk0p11"
 
 inherit mkboot old-kernel-gcc-hdrs
